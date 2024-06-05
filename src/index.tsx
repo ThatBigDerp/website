@@ -5,7 +5,7 @@ import type { FC } from 'hono/jsx'
 
 import {Layout} from './components/moles/base'
 import {NavbarComponent} from './components/navbar'
-
+import {Loader} from './components/moles/transition'
 
 const app = new Hono()
 
@@ -13,17 +13,50 @@ const Content: FC = (props) => {
   return (
     <Layout>
         <NavbarComponent></NavbarComponent>
-        <div id="content" class="flex flex-wrap ml-9 my-5">
-            <div class="w-full max-w-full sm:w-1/4 mx-auto text-center">
-                <p class="text-lg text-slate-500 py-1">
-                    Tailwind CSS Component from <a href="https://www.loopple.com/theme/riva-dashboard-tailwind?ref=tailwindcomponents" class="text-slate-700 hover:text-slate-900" target="_blank">Riva Dashboard Library</a> by <a href="https://www.loopple.com" class="text-slate-700 hover:text-slate-900" target="_blank">Loopple Builder</a>.
-                </p>
+        <div class="flex flex-wrap ml-9 my-5">
+            <div id="content" class="w-full max-w-full sm:w-1/4 mx-auto text-center">
+
             </div>
         </div>
+        <Loader />
     </Layout>
   )
 }
 
+
+app.get('/home', (c) => {
+  return c.html(
+    <>
+    <h1>HOME</h1>
+    </>)
+})
+
+app.get('/games', (c) => {
+  return c.html(
+    <>
+    <h1>GAMES</h1>
+    </>)
+})
+
+app.get('/contact', (c) => {
+  return c.html(
+    <>
+    <h1>CONTACT</h1>
+    </>)
+})
+
+app.get('/support', (c) => {
+  return c.html(
+    <h1>SUPPORT</h1>
+    )
+})
+
+app.get('/news', (c) => {
+  return c.html(
+    <>
+    <h1>NEWS</h1>
+    </>)
+})
 
 app.get('/', (c) => {
   return c.html(
@@ -31,6 +64,7 @@ app.get('/', (c) => {
     <Content />
     </>)
 })
+
 
 app.get(
   '/static/*',
