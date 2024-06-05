@@ -830,9 +830,13 @@ video {
   box-sizing: border-box;
 }
 
+.navlink {
+  cursor: pointer;
+}
+
 .active {
   pointer-events: none;
-  cursor: default;
+  cursor: default !important;
 }
 
 #controls {
@@ -856,23 +860,29 @@ video {
   position: absolute;
   background: #fff;
   opacity: 0.75;
+  transition: -webkit-clip-path .3s ease;
   transition: clip-path .3s ease;
+  transition: clip-path .3s ease, -webkit-clip-path .3s ease;
 }
 
 #play-button-before {
-  clip-path: polygon(0 0, 50% 25%, 50% 75%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 50% 25%, 50% 75%, 0% 100%);
+          clip-path: polygon(0 0, 50% 25%, 50% 75%, 0% 100%);
 }
 
 #play-button-after {
-  clip-path: polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%);
+  -webkit-clip-path: polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%);
+          clip-path: polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%);
 }
 
 #play-button:hover #play-button-before {
-  clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
+          clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
 }
 
 #play-button:hover #play-button-after{
-  clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%)
+  -webkit-clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%);
+          clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%)
 }
 
 /* loader */
@@ -887,7 +897,7 @@ video {
   transition: width 0s 1.4s ease;
 }
 
-#loader .loader__icon {
+#loader .icon {
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -897,11 +907,11 @@ video {
   transition: opacity 0.5s ease;
 }
 
-#loader .loader__icon svg {
+#loader .icon svg {
   transform-origin: 0 0;
 }
 
-#loader .loader__tile {
+#loader .tile {
   position: absolute;
   left: 0;
   width: 0;
@@ -910,32 +920,32 @@ video {
   transition: width 0.7s ease;
 }
 
-#loader .loader__tile:nth-child(0) {
+#loader .tile:nth-child(0) {
   top: calc(-1 * 20%);
   transition-delay: -0.2s;
 }
 
-#loader .loader__tile:nth-child(1) {
+#loader .tile:nth-child(1) {
   top: calc(0 * 20%);
   transition-delay: 0s;
 }
 
-#loader .loader__tile:nth-child(2) {
+#loader .tile:nth-child(2) {
   top: calc(1 * 20%);
   transition-delay: 0.2s;
 }
 
-#loader .loader__tile:nth-child(3) {
+#loader .tile:nth-child(3) {
   top: calc(2 * 20%);
   transition-delay: 0.4s;
 }
 
-#loader .loader__tile:nth-child(4) {
+#loader .tile:nth-child(4) {
   top: calc(3 * 20%);
   transition-delay: 0.6s;
 }
 
-#loader .loader__tile:nth-child(5) {
+#loader .tile:nth-child(5) {
   top: calc(4 * 20%);
   transition-delay: 0.8s;
 }
@@ -950,31 +960,31 @@ video {
   transition: opacity 0.5s 1.4s ease;
 }
 
-#loader.htmx-indicator .loader__tile {
+#loader.htmx-indicator .tile {
   width: 100%;
 }
 
-#loader.htmx-indicator .loader__tile:nth-child(0) {
+#loader.htmx-indicator .tile:nth-child(0) {
   transition-delay: -0.2s;
 }
 
-#loader.htmx-indicator .loader__tile:nth-child(1) {
+#loader.htmx-indicator .tile:nth-child(1) {
   transition-delay: 0s;
 }
 
-#loader.htmx-indicator .loader__tile:nth-child(2) {
+#loader.htmx-indicator .tile:nth-child(2) {
   transition-delay: 0.2s;
 }
 
-#loader.htmx-indicator .loader__tile:nth-child(3) {
+#loader.htmx-indicator .tile:nth-child(3) {
   transition-delay: 0.4s;
 }
 
-#loader.htmx-indicator .loader__tile:nth-child(4) {
+#loader.htmx-indicator .tile:nth-child(4) {
   transition-delay: 0.6s;
 }
 
-#loader.htmx-indicator .loader__tile:nth-child(5) {
+#loader.htmx-indicator .tile:nth-child(5) {
   transition-delay: 0.8s;
 }
 

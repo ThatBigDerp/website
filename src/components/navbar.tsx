@@ -15,7 +15,7 @@ function NavbarLink({ active, children }: PropsWithChildren<NavbarLinkType>) {
         return (
             <div>
                 <span class="select-none flex items-center justify-center px-4 py-[.775rem my-[.4rem] rounded-[.95rem]">
-                    <a hx-trigger="click" hx-indicator="#loader" hx-get={children} hx-target="#content" hx-swap="innerHTML swap:0.8s" class="active navlink flex items-center justify-center flex-grow text-[1.15rem] uppercase text-gray-900 hover:text-dark">{children}</a>
+                    <a hx-trigger="click" hx-indicator="#loader" hx-get={children} hx-target="#content" hx-swap="innerHTML settle:0.8s" class="active navlink flex items-center justify-center flex-grow text-[1.15rem] uppercase text-gray-900 hover:text-dark">{children}</a>
                 </span>
             </div>
         )    

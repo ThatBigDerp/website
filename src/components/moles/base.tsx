@@ -13,7 +13,7 @@ export const Layout: FC = (props) => {
             <link rel="stylesheet" href="/static/style.css" />
             {/* <link rel="stylesheet" href="../../tailwindcss.css" /> */}
         </head>
-        <body class="bg-gray-100">
+        <body hx-indicator="#loader" class="bg-gray-100">
             {props.children}
         </body>
       </html>
