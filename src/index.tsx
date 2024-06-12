@@ -6,6 +6,7 @@ import type { FC } from 'hono/jsx'
 import {Layout} from './components/moles/base'
 import {NavbarComponent} from './components/navbar'
 import {Loader} from './components/moles/transition'
+import { sleep } from 'bun'
 
 const app = new Hono()
 
