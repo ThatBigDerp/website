@@ -9,20 +9,7 @@ type NavbarLinkType = {
 
 
 
-<<<<<<< HEAD
 function NavbarLink({ children }: PropsWithChildren<NavbarLinkType>) {
-=======
-function NavbarLink({ active, children }: PropsWithChildren<NavbarLinkType>) {
-    if (active) {
-        return (
-            <div>
-                <span class="select-none flex items-center justify-center px-4 py-[.775rem my-[.4rem] rounded-[.95rem]">
-                    <a hx-trigger="click" hx-indicator="#loader" hx-get={children} hx-target="#content" hx-swap="innerHTML settle:0.8s" class="active navlink flex items-center justify-center flex-grow text-[1.15rem] uppercase text-gray-900 hover:text-dark">{children}</a>
-                </span>
-            </div>
-        )    
-    } else {
->>>>>>> e584b306c3a031b2a7e781c19bb7f56830a36ac2
     return(    
         <span class="select-none flex items-center justify-center px-4 py-[.775rem] my-[.4rem] rounded-[.95rem]">
             <a hx-trigger="click" hx-get={children} hx-target="#content" hx-swap="innerHTML swap:1.6s" class="navlink flex items-center justify-center flex-grow text-[1.15rem] uppercase text-gray-900 hover:text-dark" _="on htmx:beforeRequest add .htmx-indicator to #loader then add @hx-disable='true' to .navlink then wait 1.6s then remove .htmx-indicator from #loader then wait 1.5s then remove @hx-disable='true' from .navlink end on click remove .active from .active then add .active on me">{children}</a>
