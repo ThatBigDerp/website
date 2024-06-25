@@ -59,7 +59,9 @@
     clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%)
   }
 
-
+  #news-section section {
+    background-color: white;
+  }
 
 
   /* loader */
@@ -95,15 +97,15 @@
   }
 
   #loader .tile:nth-child(even){
-    --outline-color: rgb(223, 236, 98);
-    --piece-color: rgb(163, 161, 28);
+    --outline-color: #ffb700;
+    --piece-color: #ffdd00;
     --piece-shade-color: rgba(255, 255, 255, 0);
     --shade-color: rgba(255, 255, 255, 0);
   }
 
   #loader .tile:nth-child(odd){
-    --outline-color: rgb(218, 147, 67);
-    --piece-color: rgb(202, 102, 56);
+    --outline-color: #ff7b00;
+    --piece-color: #ff9500;
     --piece-shade-color: rgba(255,255,255, 0.6);
     --shade-color: rgba(255,255,255, 0.4);
   }
@@ -175,7 +177,7 @@
   cursor: pointer !important;
   z-index: 10;
   transform: perspective(1050px) translate3d(0px, 0px, 150px) rotateX(-10deg) scale(0.9, 0.9);
-  box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 70px 40px -20px rgba(255, 0, 0, 0.2);
   transition: 0.4s ease-in-out transform;
   position: relative;
   display: block;
@@ -197,7 +199,7 @@
   border-radius: 2px;
   top: 8px;
   position: relative;
-  background: #000;
+  background: #ff0000;
   display: flex;
   justify-content: center;
   padding-top: 0.25rem !important;
@@ -222,7 +224,7 @@
   width: 19px;
   height: 8px;
   display: block;
-  background: #000;
+  background: #ff0000;
   position: relative;
   float: left;
   margin: 0 6px;
@@ -245,7 +247,7 @@
   margin: 0 auto;
   top: 5px;
   position: relative;
-  background: #000;
+  background: #ff0000;
 }
 
 .bits-2 {
@@ -257,7 +259,7 @@
   width: 19px;
   height: 4px;
   display: block;
-  background: #000;
+  background: #ff0000;
   /* Changed to green for id="green" */
   position: relative;
   float: left;
